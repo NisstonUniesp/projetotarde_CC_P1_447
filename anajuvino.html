@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- Declara que este documento usa HTML5. Sempre a primeira linha do arquivo. -->
+<html lang="pt-BR">
+
+<head>
+  <!-- O <head> guarda informações SOBRE a página. Nada aqui aparece na tela. -->
+
+  <!-- Acentuação correta (ç, ã, é). Sem isso o texto pode virar "pÃ¡gina". -->
+  <meta charset="UTF-8">
+
+  <!-- Faz a página se adaptar à largura do celular. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Texto que aparece na aba do navegador. -->
+  <title>Minha primeira página</title>
+
+  <!-- CSS dentro da própria página. Em projetos maiores isso vai
+       para um arquivo separado (estilo.css) e se liga com <link>. -->
+  <style>
+    /* O seletor * pega TODOS os elementos.
+       Zera margens/paddings padrão do navegador. */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* faz padding e borda contarem dentro da largura */
+    }
+
+    /* Variáveis de cor: definidas uma vez, usadas em vários lugares.
+       Para trocar o visual da página inteira, basta mudar aqui. */
+    :root {
+      --tinta: #1c2b3a;
+      --papel: #f7f6f2;
+      --destaque: #c9822b;
+      --cinza: #5a6672;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: var(--papel);
+      color: var(--tinta);
+      line-height: 1.7;
+      /* espaço entre as linhas do texto */
+    }
+
+    /* Classe reutilizável para centralizar o conteúdo e limitar a largura.
+       Linhas muito longas cansam a leitura. */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      /* 0 em cima/baixo, automático nas laterais = centralizado */
+      padding: 0 24px;
+    }
+
+    header {
+      background-color: var(--tinta);
+      color: var(--papel);
+      padding: 56px 0 40px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #b9c4cf;
+    }
+
+    /* Menu de navegação */
+    nav {
+      margin-top: 28px;
+    }
+
+    nav a {
+      color: var(--papel);
+      text-decoration: none;
+      /* tira o sublinhado padrão do link */
+      margin-right: 20px;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    /* :hover = quando o mouse passa por cima */
+    nav a:hover,
+    nav a:focus {
+      border-bottom-color: var(--destaque);
+    }
+
+    main {
+      padding: 48px 0;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    /* ul = lista não ordenada (com bolinhas) */
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    /* Destaque para um trecho de código no meio do texto */
+    code {
+      font-family: "Courier New", monospace;
+      background-color: #ebe8e0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: var(--destaque);
+    }
+
+    footer {
+      border-top: 1px solid #ddd8cc;
+      padding: 24px 0 40px;
+      color: var(--cinza);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- O <body> guarda tudo que APARECE na tela. -->
+
+  <!-- <header> = cabeçalho da página -->
+  <header>
+    <div class="container">
+      <h1>Minha primeira página</h1>
+      <p>Um exercício de HTML e CSS feito do zero.</p>
+
+      <!-- <nav> = área de navegação. O href="#id" leva até
+           o elemento que tem aquele id na mesma página. -->
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#estrutura">Estrutura</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- <main> = conteúdo principal. Só pode haver um por página. -->
+  <main class="container">
+
+    <!-- <section> agrupa um bloco de conteúdo com seu próprio título -->
+    <section id="sobre">
+      <h2>Sobre esta página</h2>
+      <p>
+        Esta página usa apenas HTML e CSS, sem nenhuma biblioteca externa.
+        Todo o estilo está dentro da tag <code>&lt;style&gt;</code>, no
+        cabeçalho do arquivo.
+      </p>
+      <p>
+        Abra o arquivo em um editor de texto e altere os valores dentro de
+        <code>:root</code> para ver a paleta de cores mudar na página inteira.
+      </p>
+    </section>
+
+    <section id="estrutura">
+      <h2>Tags usadas aqui</h2>
+      <ul>
+        <li><code>&lt;header&gt;</code> — o topo da página</li>
+        <li><code>&lt;nav&gt;</code> — o menu de links</li>
+        <li><code>&lt;main&gt;</code> — o conteúdo principal</li>
+        <li><code>&lt;section&gt;</code> — cada bloco de assunto</li>
+        <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> — títulos, do
+          mais importante ao menos</li>
+        <li><code>&lt;p&gt;</code> — parágrafos de texto</li>
+        <li><code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code> — listas</li>
+        <li><code>&lt;a&gt;</code> — links</li>
+        <li><code>&lt;footer&gt;</code> — o rodapé</li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h2>Links</h2>
+      <p>
+        Um link para outro site precisa do endereço completo:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
+          documentação de HTML da MDN</a>.
+      </p>
+      <p>
+        Para e-mail, use <code>mailto:</code> —
+        <a href="mailto:exemplo@email.com">exemplo@email.com</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- <footer> = rodapé -->
+  <footer class="container">
+    <p>Página de exemplo · 2026</p>
+  </footer>
+
+</body>
+
+</html>
