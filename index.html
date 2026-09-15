@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logo e Texto Padrão</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f3f6fb;
+        color: #1f2937;
+      }
+
+      .container {
+        width: min(1100px, 90%);
+        margin: 60px auto;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 40px;
+        background: linear-gradient(135deg, #0f172a, #1d4ed8);
+        color: white;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-box {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ffffff;
+        color: #1d4ed8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .logo-text {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+
+      .nav {
+        display: flex;
+        gap: 20px;
+        font-size: 0.95rem;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.9;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: #111827;
+      }
+
+      .content p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #374151;
+        margin-bottom: 18px;
+      }
+
+      .button {
+        display: inline-block;
+        margin-top: 20px;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      @media (max-width: 700px) {
+        .header {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+
+        .nav {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .content h1 {
+          font-size: 1.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <div class="logo-box">IA</div>
+          <div class="logo-text">Universidade Digital</div>
+        </div>
+
+        <nav class="nav">
+          <a href="#">Início</a>
+          <a href="#">Sobre</a>
+          <a href="#">Cursos</a>
+          <a href="#">Contato</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        <h1>Inteligência Artificial na Educação Superior</h1>
+
+        <p>
+          A Inteligência Artificial tem transformado o ensino superior ao promover
+          soluções inovadoras para pesquisa, aprendizagem e gestão acadêmica.
+          Com ferramentas inteligentes, universidades conseguem personalizar o
+          ensino, otimizar processos e desenvolver novas formas de interação entre
+          alunos, professores e instituições.
+        </p>
+
+        <p>
+          Essa tecnologia permite um aprendizado mais eficiente, com suporte em tempo
+          real, análise de dados e maior acessibilidade para diferentes perfis de
+          estudantes. No contexto universitário, a IA pode contribuir significativamente
+          para a inovação educacional e para a formação de profissionais preparados para
+          os desafios do futuro.
+        </p>
+
+        <a class="button" href="#">Saiba mais</a>
+      </main>
+    </div>
+  </body>
+</html>
